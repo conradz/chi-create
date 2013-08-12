@@ -82,7 +82,7 @@ test('Add nested arrays', function(t) {
 test('Variadic arguments', function(t) {
     var one = document.createElement('h1'),
         two = document.createElement('h2'),
-        cssAttr = { 'class': 'test', 'style': 'width: 10px' },
+        cssAttr = { 'class': 'test', 'style': 'width: 10px;' },
         dataAttr = { 'data-test': 'foo' },
         text = 'Hello World!',
         node = create('div', one, cssAttr, text, dataAttr, two);
