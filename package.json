@@ -1,6 +1,6 @@
 {
   "name": "chi-create",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Simple utility to create DOM nodes",
   "main": "index.js",
   "author": "Conrad Zimmerman <me@conradz.com>",
