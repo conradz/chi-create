@@ -1,8 +1,4 @@
 // Tests must be run in a browser!
-//
-// Tests are run using [testling](https://github.com/substack/testling). You
-// can install testling locally to run tests during development. To run tests
-// you can run for example `testling -x firefox` to run tests in firefox.
 
 var test = require('tape'),
     create = require('./index');
