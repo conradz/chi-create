@@ -1,5 +1,8 @@
 # chi-create
 
+[![Build Status](https://travis-ci.org/conradz/chi-create.png?branch=master)](https://travis-ci.org/conradz/chi-create)
+[![Dependency Status](https://gemnasium.com/conradz/chi-create.png)](https://gemnasium.com/conradz/chi-create)
+
 DOM node creation ... now with added easy!
 
 This module uses Node.js-style modules, for best results use
