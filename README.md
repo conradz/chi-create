@@ -9,10 +9,10 @@ This module uses Node.js-style modules, for best results use
 create(tagName, contents...);
 ```
 
-`tagName is the HTML tag name (e.g. 'div'). contents can be any number of
-`arguments where each argument is either a plain object (for attributes), a
-`string (for text), a DOM node (for adding existing DOM nodes), or an array
-`that contains DOM nodes or more arrays.
+`tagName` is the HTML tag name (e.g. 'div'). `contents` can be any number of
+arguments where each argument is either a plain object (for attributes), a
+string (for text), a DOM node (for adding existing DOM nodes), or an array
+that contains DOM nodes or more arrays.
 
 ## Examples
 
