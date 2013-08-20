@@ -6,7 +6,8 @@
   "author": "Conrad Zimmerman <me@conradz.com>",
   "license": "BSD",
   "scripts": {
-    "test": "grunt test"
+    "test": "chi-build test",
+    "serve": "chi-build serve"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,6 @@
   },
   "devDependencies": {
     "tape": "~1.0.4",
-    "grunt-cli": "*",
-    "grunt": "~0.4.1",
-    "grunt-sauce-tap": "0.0.5",
-    "grunt-browserify": "~1.2.2"
+    "chi-build": "0.0.1"
   }
 }
