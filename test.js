@@ -1,7 +1,8 @@
 // Tests must be run in a browser!
 
 var test = require('tape'),
-    create = require('./index');
+    create = require('./index'),
+    document = window.document;
 
 test('Create empty node', function(t) {
     var node = create('div');
@@ -11,7 +12,7 @@ test('Create empty node', function(t) {
 });
 
 test('Set node attributes', function(t) {
-    var node = create('div', { "class": "foo bar", 'data-test': 'value' });
+    var node = create('div', { 'class': 'foo bar', 'data-test': 'value' });
     t.equal(node.getAttribute('class'), 'foo bar');
     t.equal(node.getAttribute('data-test'), 'value');
     t.end();
@@ -85,7 +86,7 @@ test('Variadic arguments', function(t) {
 
     t.equal(node.innerHTML, '<h1></h1>Hello World!<h2></h2>');
     t.equal(node.getAttribute('class'), cssAttr['class']);
-    t.equal(node.getAttribute('style'), cssAttr['style']);
+    t.equal(node.getAttribute('style'), cssAttr.style);
     t.equal(node.getAttribute('data-test'), dataAttr['data-test']);
     t.end();
 });

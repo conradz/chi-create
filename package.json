@@ -7,7 +7,8 @@
   "license": "BSD",
   "scripts": {
     "test": "chi-build test",
-    "serve": "chi-build serve"
+    "serve": "chi-build serve",
+    "lint": "chi-build lint"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,6 @@
   },
   "devDependencies": {
     "tape": "~1.0.4",
-    "chi-build": "0.0.1"
+    "chi-build": "0.0.4"
   }
 }
