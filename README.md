@@ -10,15 +10,6 @@ DOM node creation ... now with added easy!
 This module uses Node.js-style modules, for best results use
 [browserify](https://github.com/substack/node-browserify).
 
-```js
-create(tagName, contents...);
-```
-
-`tagName` is the HTML tag name (e.g. 'div'). `contents` can be any number of
-arguments where each argument is either a plain object (for attributes), a
-string (for text), a DOM node (for adding existing DOM nodes), or an array
-that contains DOM nodes or more arrays.
-
 ## Examples
 
 Create an empty `<div>` node and append it to the document body:
@@ -72,3 +63,14 @@ var hello = create('span', 'Hello'),
 
 create('span', attributes, hello, ' World', mark);
 ```
+
+## Reference
+
+```js
+create(tagName, contents...);
+```
+
+`tagName` is the HTML tag name (e.g. 'div'). `contents` can be any number of
+arguments where each argument is either a plain object (for attributes), a
+string (for text), a DOM node (for adding existing DOM nodes), or an array
+that contains DOM nodes or more arrays.
