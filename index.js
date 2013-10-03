@@ -1,37 +1,32 @@
-var _ = require('lodash'),
-    document = window.document;
+var forOwn = require('mout/object/forOwn'),
+    forEach = require('mout/array/forEach'),
+    isArray = require('mout/lang/isArray'),
+    isPlainObject = require('mout/lang/isPlainObject');
 
-function setAttributes(tag, attributes) {
-    _.forOwn(attributes, function(value, name) {
-        tag.setAttribute(name, value);
-    });
-}
+var document = window.document,
+    slice = Array.prototype.slice;
 
-function addContent(tag, content) {
-    if (typeof content === 'string') {
-        tag.appendChild(document.createTextNode(content));
-    } else if (_.isArray(content)) {
-        _.forEach(content, function(value) {
-            addContent(tag, value);
-        });
-    } else {
-        tag.appendChild(content);
-    }
-}
+module.exports = create;
 
 function create(tagName) {
     var tag = document.createElement(tagName);
-
-    for (var i = 1, l = arguments.length; i < l; i++) {
-        var value = arguments[i];
-        if (_.isPlainObject(value)) {
-            setAttributes(tag, value);
-        } else {
-            addContent(tag, value);
-        }
-    }
+    forEach(slice.call(arguments, 1), addContent, tag);
 
     return tag;
 }
 
-module.exports = create;
+function addContent(value) {
+    if (typeof value === 'string') {
+        this.appendChild(document.createTextNode(value));
+    } else if (isPlainObject(value)) {
+        forOwn(value, setAttribute, this);
+    } else if (isArray(value)) {
+        forEach(value, addContent, this);
+    } else {
+        this.appendChild(value);
+    }
+}
+
+function setAttribute(value, name) {
+    this.setAttribute(name, value);
+}
