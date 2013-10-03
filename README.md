@@ -5,6 +5,8 @@
 [![Build Status](https://drone.io/github.com/conradz/chi-create/status.png)](https://drone.io/github.com/conradz/chi-create/latest)
 [![Dependency Status](https://gemnasium.com/conradz/chi-create.png)](https://gemnasium.com/conradz/chi-create)
 
+[![Selenium Test Status](https://saucelabs.com/browser-matrix/chi-create.svg)](https://saucelabs.com/u/chi-create)
+
 DOM node creation ... now with added easy!
 
 This module uses Node.js-style modules, for best results use
