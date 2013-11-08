@@ -7,8 +7,9 @@
   "license": "BSD",
   "scripts": {
     "test": "hut-build test",
-    "serve": "hut-build serve",
-    "lint": "hut-build lint"
+    "start": "hut-build serve",
+    "lint": "hut-build lint",
+    "build": "hut-build build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
     "mout": "~0.7.1"
   },
   "devDependencies": {
-    "tape": "~1.1.1",
-    "hut-build": "~0.1.4"
+    "tape": "~2.1.0",
+    "hut-build": "~0.2.0"
   }
 }

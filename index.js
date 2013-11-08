@@ -1,3 +1,5 @@
+'use strict';
+
 var forOwn = require('mout/object/forOwn'),
     forEach = require('mout/array/forEach'),
     isArray = require('mout/lang/isArray'),
@@ -16,6 +18,7 @@ function create(tagName) {
 }
 
 function addContent(value) {
+    /* jshint validthis: true */
     if (typeof value === 'string') {
         this.appendChild(document.createTextNode(value));
     } else if (isPlainObject(value)) {
@@ -28,5 +31,6 @@ function addContent(value) {
 }
 
 function setAttribute(value, name) {
+    /*jshint validthis: true */
     this.setAttribute(name, value);
 }

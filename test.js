@@ -1,4 +1,4 @@
-// Tests must be run in a browser!
+'use strict';
 
 var test = require('tape'),
     create = require('./index'),
