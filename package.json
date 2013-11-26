@@ -16,10 +16,10 @@
     "url": "git@bitbucket.org:conradz/dom-create.git"
   },
   "dependencies": {
-    "mout": "~0.7.1"
+    "mout": "~0.8.0"
   },
   "devDependencies": {
-    "tape": "~2.1.0",
+    "tape": "~2.3.0",
     "hut-build": "~0.2.0"
   }
 }
